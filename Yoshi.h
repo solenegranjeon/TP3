@@ -37,6 +37,7 @@ class Yoshi : public Character {
   //                              Public Methods
   // =========================================================================
   virtual void Accelerate();
+  virtual void WhatAmI();
   void Break();
   Color color_;
  protected :

@@ -3,6 +3,8 @@
 //                                  Includes
 // ===========================================================================
 #include "Yoshi.h"
+#include <cstdio>
+#include <cstdlib>
 
 // ===========================================================================
 //                       Definition of static attributes
@@ -36,6 +38,10 @@ void Yoshi::Accelerate() {
 void Yoshi::Break() {
   if (speed_ < 0.1) speed_ = 0.;
   else speed_ *= 0.8;
+}
+
+void Yoshi::WhatAmI(){
+	printf("I am a Yoshi!\n");
 }
 
 // ===========================================================================
