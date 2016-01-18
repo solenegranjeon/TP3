@@ -19,7 +19,7 @@
 // ===========================================================================
 int main(int argc, char* argv[]) {
   Character   character1 = Character();
-  Yoshi       character2 = Yoshi();
+  Yoshi       character2 = Yoshi(GREEN);
   Character*  character3 = new Character();
   Yoshi*      character4 = new Yoshi();
   Character*  character7 = new Yoshi();
@@ -50,5 +50,6 @@ int main(int argc, char* argv[]) {
   printf("Character 4 speed : %f\n", character4->speed());
   printf("Character 7 speed : %f\n", character7->speed());
 
+  printf("Cha 2 est de couleur : %d",character2.color_);
   return 0;
 }

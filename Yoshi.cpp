@@ -3,7 +3,6 @@
 //                                  Includes
 // ===========================================================================
 #include "Yoshi.h"
-enum Color {RED, GREEN, BLUE};
 
 // ===========================================================================
 //                       Definition of static attributes
@@ -13,10 +12,10 @@ enum Color {RED, GREEN, BLUE};
 //                                Constructors
 // ===========================================================================
 Yoshi::Yoshi() {
-	color_ = GREEN;
+	color_ = RED;
 }
 Yoshi::Yoshi(Color co) {
-	color_(co);
+	color_=co;
 }
 // ===========================================================================
 //                                 Destructor
