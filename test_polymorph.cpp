@@ -50,7 +50,15 @@ int main(int argc, char* argv[]) {
   printf("Character 4 speed : %f\n", character4->speed());
   printf("Character 7 speed : %f\n", character7->speed());
 	
-	printf("%d\n",Character::nb_instances);
+	printf("On a créé %d characters.\n",Character::nb_instances);
+	
+	character1.~Character();
+	character2.~Character();
+	delete character3;
+	delete character4;
+	delete character7;
+	
+	printf("Après les deletes, il en reste %d.\n",Character::nb_instances);
 
   return 0;
 }
