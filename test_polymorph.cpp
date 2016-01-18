@@ -49,6 +49,8 @@ int main(int argc, char* argv[]) {
   printf("Character 3 speed : %f\n", character3->speed());
   printf("Character 4 speed : %f\n", character4->speed());
   printf("Character 7 speed : %f\n", character7->speed());
+	
+	printf("%d\n",Character::nb_instances);
 
   return 0;
 }
