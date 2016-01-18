@@ -42,5 +42,6 @@ int main(int argc, char* argv[]) {
 	
 	printf("Après les deletes, il en reste %d.\n",Character::nb_instances);
 
+	character2.WhatAmI();
   return 0;
 }
