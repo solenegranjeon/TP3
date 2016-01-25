@@ -19,9 +19,7 @@
 // ===========================================================================
 int main(int argc, char* argv[]) {
 	
-  Character   character1 = Character();
   Yoshi       character2 = Yoshi(GREEN);
-  Character*  character3 = new Character(); 
   Yoshi*      character4 = new Yoshi();
 
   character2.Accelerate();
@@ -37,10 +35,11 @@ int main(int argc, char* argv[]) {
 
   printf("Character 2 speed : %f\n", character2.speed());
   printf("Character 4 speed : %f\n", character4->speed());
-  printf("Character 7 speed : %f\n", character7->speed());
 
   printf("\n" );
-  printf("Cha 2 est de couleur : %d",character2.color_);
+  
+  printf("Character 2 est de couleur : %d\n",character2.color_);
+  character2.WhatAmI();
 
 	
 	printf("On a créé %d characters.\n",Character::nb_instances);
@@ -49,8 +48,6 @@ int main(int argc, char* argv[]) {
 	delete character4;
 	
 	printf("Après les deletes, il en reste %d.\n",Character::nb_instances);
-
-	character2.WhatAmI();
 
   return 0;
 }
