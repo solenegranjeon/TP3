@@ -4,10 +4,15 @@
 // ===========================================================================
 #include <cstdio>
 #include <cstdlib>
-#
+#include <fstream>
+#include <iostream>
+#include <string>
+
 #include "Character.h"
 #include "Yoshi.h"
+#include "Mario.h"
 
+using namespace std; 
 
 // ===========================================================================
 //                            Function declarations
@@ -19,34 +24,41 @@
 // ===========================================================================
 int main(int argc, char* argv[]) {
 	
-  Yoshi       character2 = Yoshi(GREEN);
-  Yoshi*      character4 = new Yoshi();
-
-  character2.Accelerate();
-  character4->Accelerate();
-
-  printf("Character 2 speed : %f\n", character2.speed());
-  printf("Character 4 speed : %f\n", character4->speed());
-
-  printf("\n" );
-
-  character2.Break();
-  character4->Break();
-
-  printf("Character 2 speed : %f\n", character2.speed());
-  printf("Character 4 speed : %f\n", character4->speed());
-
-  printf("\n" );
+  Yoshi*      character1 = new Yoshi(GREEN);
+  Yoshi*      character2 = new Yoshi();
+  Mario*			character3 = new Mario();
+  Mario*			character4 = new Mario();
   
-  character2.WhatAmI();
-  character4->WhatAmI();
-
+  ofstream monFlux("speeds.txt");
+  monFlux << "Vitesses de Yoshi, Yoshi, Mario et Mario:"<< endl;
+  monFlux << "Phase d'accélération:"<< endl;
+  
+  for(int t=0;t<10;t++){
+		character1->Accelerate();
+		character2->Accelerate();
+		character3->Accelerate();
+		character4->Accelerate();
+		
+		monFlux << "t=" << t <<" speeds:" << character1->speed() <<", " <<
+		 character2->speed() <<", " << character3->speed() <<", " << 
+		 character4->speed() << endl;
+				
+	}
 	
-	printf("On a créé %d characters.\n",Character::nb_instances);
+	monFlux << "Phase de décélération :"<< endl;
+  
 	
-	delete character4;
-	
-	printf("Après les deletes, il en reste %d.\n",Character::nb_instances);
+	for(int t=0;t<10;t++){
+		character1->Break();
+		character2->Break();
+		character3->Break();
+		character4->Break();
+		
+		monFlux << "t=" << t <<" speeds:" << character1->speed() <<", " <<
+		character2->speed() <<", " << character3->speed() <<", " << 
+		character4->speed() << endl;
+				
+	}
 
   return 0;
 }
