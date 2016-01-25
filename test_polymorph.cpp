@@ -44,7 +44,6 @@ int main(int argc, char* argv[]) {
 	
 	printf("On a créé %d characters.\n",Character::nb_instances);
 	
-	character2.~Character();
 	delete character4;
 	
 	printf("Après les deletes, il en reste %d.\n",Character::nb_instances);
