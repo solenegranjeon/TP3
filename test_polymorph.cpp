@@ -38,8 +38,8 @@ int main(int argc, char* argv[]) {
 
   printf("\n" );
   
-  printf("Character 2 est de couleur : %d\n",character2.color_);
   character2.WhatAmI();
+  character4->WhatAmI();
 
 	
 	printf("On a créé %d characters.\n",Character::nb_instances);

@@ -39,7 +39,7 @@ class Yoshi : public Character {
   virtual void Accelerate();
   virtual void WhatAmI();
   void Break();
-  Color color_;
+  
  protected :
   // =========================================================================
   //                             Protected Methods
@@ -50,6 +50,7 @@ class Yoshi : public Character {
   // =========================================================================
   
   private :
+  Color color_;
 
 };
 

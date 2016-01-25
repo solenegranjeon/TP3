@@ -41,7 +41,12 @@ void Yoshi::Break() {
 }
 
 void Yoshi::WhatAmI(){
-	printf("I am a Yoshi!\n");
+	printf("I am a ");
+	if(color_==0){printf("red ");}
+	if(color_==1){printf("green ");}
+	if(color_==2){printf("blue ");}
+	printf("Yoshi!\n");
+	
 }
 
 // ===========================================================================
